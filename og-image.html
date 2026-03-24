@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OG Image Preview — 1200×630</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Serif+Display&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; background: #F7F2EA; }
+
+  #card {
+    width: 1200px;
+    height: 630px;
+    background: #F7F2EA;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 72px 88px;
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow: hidden;
+  }
+
+  /* 배경 장식 */
+  #card::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -60px;
+    width: 560px; height: 560px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184,132,90,0.13) 0%, transparent 68%);
+    pointer-events: none;
+  }
+  #card::after {
+    content: '';
+    position: absolute;
+    bottom: -120px; left: 60px;
+    width: 380px; height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184,132,90,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* 코너 장식 선 */
+  .corner-tl, .corner-br {
+    position: absolute;
+    width: 48px; height: 48px;
+  }
+  .corner-tl {
+    top: 40px; left: 48px;
+    border-top: 1px solid rgba(184,132,90,0.45);
+    border-left: 1px solid rgba(184,132,90,0.45);
+  }
+  .corner-br {
+    bottom: 40px; right: 48px;
+    border-bottom: 1px solid rgba(184,132,90,0.45);
+    border-right: 1px solid rgba(184,132,90,0.45);
+  }
+
+  .content { position: relative; z-index: 1; max-width: 680px; }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #B8845A;
+    margin-bottom: 24px;
+  }
+  .eyebrow::before {
+    content: '';
+    display: block;
+    width: 28px; height: 1px;
+    background: #B8845A;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: #2E231A;
+    margin-bottom: 20px;
+  }
+  h1 em {
+    font-style: italic;
+    color: #B8845A;
+  }
+
+  .desc {
+    font-size: 16px;
+    font-weight: 300;
+    color: #7A5C42;
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+
+  .tags {
+    display: flex;
+    gap: 8px;
+  }
+  .tag {
+    background: rgba(184,132,90,0.12);
+    color: #B8845A;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 2px;
+  }
+
+  /* 오른쪽 장식 */
+  .deco {
+    position: absolute;
+    right: 88px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    z-index: 1;
+  }
+  .deco-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 52px;
+    color: #2E231A;
+    letter-spacing: 0.01em;
+  }
+  .deco-logo span { color: #B8845A; }
+  .deco-line {
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(to bottom, #B8845A, transparent);
+  }
+  .deco-handle {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(122,92,66,0.6);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  /* 하단 바 */
+  .bottom-bar {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #B8845A 0%, rgba(184,132,90,0.3) 60%, transparent 100%);
+  }
+</style>
+</head>
+<body>
+<div id="card">
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+
+  <div class="content">
+    <div class="eyebrow">미리캔버스 디자인허브 기여자</div>
+    <h1>감성을 담은<br><em>디자인 에셋</em></h1>
+    <p class="desc">요소부터 템플릿까지, 당신의 콘텐츠에<br>온기를 더하는 디자인 리소스</p>
+    <div class="tags">
+      <span class="tag">요소</span>
+      <span class="tag">배경</span>
+      <span class="tag">템플릿</span>
+      <span class="tag">상품샵</span>
+    </div>
+  </div>
+
+  <div class="deco">
+    <div class="deco-logo">somang<span>pli</span></div>
+    <div class="deco-line"></div>
+    <div class="deco-handle">@somangpli</div>
+  </div>
+
+  <div class="bottom-bar"></div>
+</div>
+
+<style>
+  /* 안내 패널 (캡처 시 숨김 처리 가능) */
+  #guide {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: #2E231A;
+    color: #F7F2EA;
+    font-family: monospace;
+    font-size: 12px;
+    padding: 10px 16px;
+    line-height: 1.7;
+    z-index: 999;
+  }
+  #guide strong { color: #B8845A; }
+</style>
+<div id="guide">
+  <strong>캡처 방법:</strong>
+  Chrome에서 F12(DevTools) → Console 탭 → 아래 명령어 붙여넣기 후 Enter →
+  <strong>document.getElementById('guide').remove()</strong> 실행 후,
+  Ctrl+Shift+P → "Capture node screenshot" → #card 클릭 → og-image.jpg로 저장
+</div>
+</body>
+</html>
