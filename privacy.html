@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>개인정보처리방침 — somangpli 디자인 스튜디오</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=DM+Serif+Display&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: #F7F2EA;
+    color: #2E231A;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  :root {
+    --accent: #B8845A;
+    --dark: #2E231A;
+    --mid: #7A5C42;
+    --light: #E8DDD0;
+    --card-bg: #FDFAF6;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    height: 64px;
+    background: rgba(247,242,234,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(184,132,90,0.15);
+    box-shadow: 0 2px 24px rgba(46,35,26,0.06);
+  }
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.35rem;
+    letter-spacing: 0.02em;
+    color: var(--dark);
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid);
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--accent); }
+
+  /* CONTENT */
+  .page-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 120px 5vw 100px;
+  }
+  .page-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .page-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 24px; height: 1px;
+    background: var(--accent);
+  }
+  .page-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--dark);
+    margin-bottom: 0.6rem;
+  }
+  .page-date {
+    font-size: 0.8rem;
+    color: var(--mid);
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--light);
+  }
+
+  .section {
+    margin-bottom: 2.8rem;
+  }
+  .section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 0.8rem;
+    padding-left: 0.8rem;
+    border-left: 2px solid var(--accent);
+  }
+  .section p {
+    font-size: 0.9rem;
+    color: #4A3828;
+    line-height: 1.85;
+    margin-bottom: 0.6rem;
+  }
+  .section p:last-child { margin-bottom: 0; }
+  .section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.8rem;
+    font-size: 0.88rem;
+  }
+  .section table th, .section table td {
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--light);
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.6;
+  }
+  .section table th {
+    background: rgba(184,132,90,0.08);
+    font-weight: 400;
+    color: var(--dark);
+    white-space: nowrap;
+  }
+  .section table td { color: #4A3828; }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    color: rgba(247,242,234,0.45);
+    padding: 2rem 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+  }
+  footer .footer-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: rgba(247,242,234,0.7);
+  }
+  footer .footer-logo span { color: var(--accent); }
+  footer a { color: rgba(247,242,234,0.45); transition: color 0.2s; }
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 1.2rem; }
+    .page-wrap { padding: 96px 1.2rem 80px; }
+    footer { flex-direction: column; gap: 0.8rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">somang<span>pli</span></a>
+  <a class="nav-back" href="index.html">← 홈으로</a>
+</nav>
+
+<div class="page-wrap">
+  <p class="page-eyebrow">Legal</p>
+  <h1 class="page-title">개인정보처리방침</h1>
+  <p class="page-date">시행일: 2026년 3월 24일</p>
+
+  <div class="section">
+    <h2>1. 개요</h2>
+    <p>somangpli 디자인 스튜디오(이하 "운영자")는 이용자의 개인정보를 중요하게 생각하며, 「개인정보 보호법」을 준수합니다. 본 방침은 운영자가 운영하는 웹사이트(<strong>https://somangpli.github.io</strong>)에서 수집하는 개인정보의 처리 방법과 목적을 안내합니다.</p>
+  </div>
+
+  <div class="section">
+    <h2>2. 수집하는 개인정보 항목 및 목적</h2>
+    <p>운영자는 이메일 문의 시에만 개인정보를 수집합니다.</p>
+    <table>
+      <tr>
+        <th>수집 항목</th>
+        <td>이메일 주소</td>
+      </tr>
+      <tr>
+        <th>수집 목적</th>
+        <td>문의 내용 확인 및 답변 발송</td>
+      </tr>
+      <tr>
+        <th>보유 기간</th>
+        <td>문의 처리 완료 후 즉시 삭제</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>3. 개인정보의 제3자 제공</h2>
+    <p>운영자는 이용자의 개인정보를 제3자에게 제공하지 않습니다.</p>
+  </div>
+
+  <div class="section">
+    <h2>4. 개인정보의 처리 위탁</h2>
+    <p>운영자는 개인정보 처리 업무를 외부에 위탁하지 않습니다.</p>
+  </div>
+
+  <div class="section">
+    <h2>5. 이용자의 권리</h2>
+    <p>이용자는 언제든지 자신의 개인정보에 대해 열람, 수정, 삭제를 요청할 수 있습니다. 요청은 아래 이메일로 연락해주시면 지체 없이 조치합니다.</p>
+  </div>
+
+  <div class="section">
+    <h2>6. 개인정보 보호책임자</h2>
+    <table>
+      <tr>
+        <th>담당자</th>
+        <td>somangpli</td>
+      </tr>
+      <tr>
+        <th>이메일</th>
+        <td>hello@example.com</td>
+      </tr>
+    </table>
+    <p style="margin-top:0.8rem;">※ 이메일 주소는 실제 주소로 교체해주세요.</p>
+  </div>
+
+  <div class="section">
+    <h2>7. 방침 변경 안내</h2>
+    <p>본 개인정보처리방침은 법령 또는 운영 정책 변경에 따라 수정될 수 있으며, 변경 시 웹사이트를 통해 공지합니다.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">somang<span>pli</span></div>
+  <span>© 2026 somangpli. All rights reserved.</span>
+  <a href="https://www.bizhows.com/v/creator/@somangpli" target="_blank" rel="noopener noreferrer">@somangpli</a>
+</footer>
+
+</body>
+</html>
